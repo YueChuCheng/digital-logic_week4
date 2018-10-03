@@ -502,9 +502,7 @@ buttonState = digitalRead(buttonPin);
       if(i==8){
       i=0;
       }
-if(buttonState == LOW){
-    break;
-      }
+
       
     }
 
@@ -513,7 +511,7 @@ int c=0;
 while(1){
    
   display.clear();
-      display.drawXbm(c, 0,64, 128,*( idle+c));
+      display.drawXbm(i*5, 0,64, 128,*( idle+c));
       c++;
       display.display(); 
       delay(50);
@@ -534,7 +532,6 @@ if(buttonState == HIGH){
 }
     
      
-
 }
   
   //讀取(digitalRead)腳位，判斷是否切換圖片 
